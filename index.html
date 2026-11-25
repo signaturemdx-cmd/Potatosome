@@ -707,7 +707,14 @@ html[lang=ko] .sub{max-width:31em}
     root.style.removeProperty('color-scheme');
     root.classList.remove('gate-locked');
     root.classList.add('gate-leaving');
-    window.scrollTo(0, 0);
+    /* a deep link (#cooling, #technology …) keeps its target after the gate */
+    var hash = (location.hash || '').slice(1);
+    var target = null;
+    if (hash) {
+      try { target = document.getElementById(hash) || document.getElementsByName(hash)[0]; } catch (e) {}
+    }
+    if (target) setTimeout(function () { try { target.scrollIntoView({ block: 'start' }); } catch (e) {} }, 80);
+    else window.scrollTo(0, 0);
     setTimeout(function () {
       if (gate.parentNode) gate.parentNode.removeChild(gate);
       root.classList.remove('gate-leaving');
@@ -760,6 +767,7 @@ html[lang=ko] .sub{max-width:31em}
 })();
 </script>
 <!-- nextab-gate:body:end -->
+
 
 
 
