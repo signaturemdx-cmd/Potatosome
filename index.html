@@ -47,7 +47,7 @@
     position: fixed;
     inset: 0;
     z-index: 2147483000;
-    display: none;
+    display: flex;
     height: 100vh;
     height: 100dvh;
     min-height: 100vh;
@@ -65,8 +65,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  html.gate-locked #access-gate,
-  html.gate-leaving #access-gate { display: flex; }
+  html.gate-ready #access-gate { display: none; }
 
   #access-gate *,
   #access-gate *::before,
@@ -346,6 +345,7 @@
     html.gate-leaving #access-gate .ag-frame { transition: none; }
   }
 </style>
+<noscript><style>html { background: #0c1913; } html body > *:not(#access-gate) { display: none !important; }</style></noscript>
 <!-- nextab-gate:head:end -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Potatosome® · Plant exosomes that repair and defend the skin barrier">
@@ -767,6 +767,7 @@ html[lang=ko] .sub{max-width:31em}
 })();
 </script>
 <!-- nextab-gate:body:end -->
+
 
 
 
