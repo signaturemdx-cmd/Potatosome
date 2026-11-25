@@ -3,7 +3,350 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
+<!-- nextab-gate:head:start -->
+<!-- Private preview: this whole site stays out of search indexes. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<script>
+  /* Runs before the body is parsed: keep the page hidden until the passcode gate is passed.
+     A pass already given in this browsing session skips the gate with no flash. */
+  (function () {
+    var KEY = 'nextab_exosome_unlocked_v1';
+    var root = document.documentElement;
+    var open = false;
+    try { open = sessionStorage.getItem(KEY) === '1'; } catch (e) {}
+    root.className += open ? ' gate-ready' : ' gate-locked';
+    if (!open) {
+      /* dark canvas from the first paint: an inline rule that lands before the
+         page stylesheets do, so no white or paper flash while they download */
+      root.style.backgroundColor = '#0c1913';
+      root.style.colorScheme = 'dark';
+      var boot = document.createElement('style');
+      boot.id = 'nextab-gate-boot-style';
+      boot.appendChild(document.createTextNode(
+        'html.gate-locked,html.gate-locked body{background:#0c1913 !important;color-scheme:dark}'));
+      (document.head || root).appendChild(boot);
+    }
+    window.__nextabGateUnlocked = open;
+  })();
+</script>
+<style id="access-gate-style">
+  /* ---- Nextab private-access gate: pure CSS, no image or video asset ---- */
+  html.gate-locked, html.gate-locked body { height: 100%; overflow: hidden; }
+  html.gate-locked, html.gate-locked body { background: #0c1913 !important; }
+  html.gate-locked body > *:not(#access-gate) { display: none !important; }
+  /* the page pre-hides its body while English strings load; the gate is already
+     in the chosen language, so let it paint instead of a white flash */
+  html.gate-locked.lang-en:not(.lang-ready) body { opacity: 1 !important; }
+
+  #access-gate {
+    --ag-forest: #0c1913;
+    --ag-gold: #c9a96e;
+    --ag-ivory: #f5f0e3;
+    --ag-cream: #e9dfc9;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483000;
+    display: none;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: clamp(18px, 3.2vw, 40px);
+    box-sizing: border-box;
+    color: var(--ag-ivory);
+    font-family: 'Noto Sans KR', 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background:
+      radial-gradient(120% 82% at 50% -18%, rgba(201, 169, 110, .11), rgba(201, 169, 110, 0) 60%),
+      radial-gradient(82% 72% at 106% 110%, rgba(94, 150, 120, .13), rgba(94, 150, 120, 0) 62%),
+      linear-gradient(158deg, #0d1b14 0%, #0c1913 42%, #0a1510 72%, #08110d 100%);
+    overflow: hidden;
+    isolation: isolate;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html.gate-locked #access-gate,
+  html.gate-leaving #access-gate { display: flex; }
+
+  #access-gate *,
+  #access-gate *::before,
+  #access-gate *::after { box-sizing: border-box; }
+
+  /* faint woven tone, masked to the centre */
+  #access-gate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(201, 169, 110, .05) 0 1px, transparent 1px 172px),
+      repeating-linear-gradient(0deg, rgba(201, 169, 110, .04) 0 1px, transparent 1px 172px);
+    -webkit-mask-image: radial-gradient(74% 62% at 50% 42%, #000 4%, rgba(0, 0, 0, .32) 54%, transparent 84%);
+    mask-image: radial-gradient(74% 62% at 50% 42%, #000 4%, rgba(0, 0, 0, .32) 54%, transparent 84%);
+  }
+  /* warm halo behind the wordmark block */
+  #access-gate::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(860px, 94vw);
+    height: min(860px, 94vw);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(201, 169, 110, .075), rgba(201, 169, 110, .02) 55%, rgba(201, 169, 110, 0) 74%);
+  }
+  #access-gate .ag-sheen {
+    position: absolute;
+    inset: -25% -35%;
+    pointer-events: none;
+    background: linear-gradient(108deg, transparent 40%, rgba(201, 169, 110, .05) 46%, rgba(246, 236, 208, .1) 50%, rgba(201, 169, 110, .05) 54%, transparent 60%);
+    animation: agSheen 17s ease-in-out infinite;
+  }
+  @keyframes agSheen {
+    0%, 100% { transform: translate3d(-12%, 0, 0); }
+    50% { transform: translate3d(12%, 0, 0); }
+  }
+  #access-gate .ag-frame-line {
+    position: absolute;
+    inset: clamp(11px, 1.7vw, 22px);
+    border: 1px solid rgba(201, 169, 110, .17);
+    pointer-events: none;
+  }
+
+  #access-gate .ag-frame {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  #access-gate .ag-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #access-gate .ag-brand { display: flex; flex-direction: column; gap: 9px; }
+  #access-gate .ag-word {
+    font-family: 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--ag-ivory);
+  }
+  #access-gate .ag-sub {
+    font-size: 10.5px;
+    line-height: 1;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: rgba(201, 169, 110, .88);
+  }
+  #access-gate sup { font-size: .62em; vertical-align: super; letter-spacing: 0; line-height: 0; }
+  #access-gate .ag-dot { color: rgba(201, 169, 110, .55); padding: 0 .18em; }
+
+  #access-gate .ag-lang { display: flex; align-items: center; gap: 9px; }
+  #access-gate .ag-lang button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    padding: 5px 1px;
+    font: inherit;
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: rgba(245, 240, 227, .52);
+    cursor: pointer;
+    transition: color .3s ease;
+  }
+  #access-gate .ag-lang button:hover { color: var(--ag-ivory); }
+  #access-gate .ag-lang button[aria-pressed="true"] { color: var(--ag-gold); }
+  #access-gate .ag-lang .ag-bar { display: block; width: 1px; height: 10px; background: rgba(201, 169, 110, .34); }
+
+  #access-gate .ag-main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(26px, 5vh, 60px) 0;
+    text-align: center;
+  }
+  #access-gate .ag-rule {
+    display: block;
+    width: 46px;
+    height: 1px;
+    margin-bottom: clamp(20px, 3vh, 28px);
+    background: linear-gradient(90deg, transparent, var(--ag-gold), transparent);
+  }
+  #access-gate .ag-eyebrow {
+    margin: 0 0 clamp(16px, 2.4vh, 22px);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: rgba(201, 169, 110, .95);
+  }
+  #access-gate .ag-title {
+    margin: 0;
+    font-family: 'Noto Sans KR', 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+    font-size: clamp(25px, 3.1vw, 36px);
+    font-weight: 300;
+    line-height: 1.42;
+    letter-spacing: .015em;
+    color: var(--ag-ivory);
+  }
+  #access-gate .ag-note {
+    margin: clamp(14px, 2vh, 19px) auto 0;
+    max-width: 30em;
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: .01em;
+    color: rgba(233, 223, 201, .72);
+  }
+
+  #access-gate .ag-form { width: min(366px, 100%); margin-top: clamp(26px, 4vh, 42px); }
+  #access-gate .ag-lab {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .46em;
+    text-transform: uppercase;
+    color: rgba(201, 169, 110, .72);
+    text-align: center;
+  }
+  #access-gate .ag-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(201, 169, 110, .32);
+    transition: border-color .35s ease, box-shadow .35s ease;
+  }
+  #access-gate .ag-field:focus-within {
+    border-color: rgba(201, 169, 110, .82);
+    box-shadow: 0 12px 26px -22px rgba(201, 169, 110, .9);
+  }
+  #access-gate .ag-field.is-shake { animation: agShake .5s cubic-bezier(.36, .07, .19, .97) both; }
+  @keyframes agShake {
+    10%, 90% { transform: translateX(-2px); }
+    20%, 80% { transform: translateX(3px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+  }
+  #access-gate input.ag-in {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    color: var(--ag-ivory);
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: .42em;
+    text-align: center;
+    text-indent: .42em;
+    padding: 10px 4px 13px;
+    caret-color: var(--ag-gold);
+  }
+  #access-gate input.ag-in::placeholder { color: rgba(245, 240, 227, .27); letter-spacing: .42em; }
+  #access-gate input.ag-in::-ms-reveal { display: none; }
+  #access-gate .ag-btn {
+    flex: none;
+    margin-bottom: 7px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(201, 169, 110, .5);
+    border-radius: 2px;
+    background: rgba(201, 169, 110, .09);
+    color: var(--ag-gold);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .22em;
+    padding: 11px 15px 10px;
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+    white-space: nowrap;
+  }
+  #access-gate .ag-btn:hover,
+  #access-gate .ag-btn:focus-visible { background: var(--ag-gold); border-color: var(--ag-gold); color: #0c1913; }
+  #access-gate .ag-btn:disabled { opacity: .55; cursor: default; }
+  #access-gate .ag-msg {
+    min-height: 19px;
+    margin: 13px 0 0;
+    font-size: 12.5px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: .01em;
+    color: #e2b5a1;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #access-gate .ag-msg.is-on { opacity: 1; transform: none; }
+
+  #access-gate .ag-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(201, 169, 110, .15);
+    font-size: 9.5px;
+    line-height: 1.5;
+    letter-spacing: .23em;
+    text-transform: uppercase;
+    color: rgba(233, 223, 201, .38);
+  }
+
+  html.gate-locked #access-gate { animation: agIn .85s cubic-bezier(.22, .61, .36, 1) both; }
+  html.gate-locked #access-gate .ag-frame { animation: agRise .9s cubic-bezier(.22, .61, .36, 1) both; }
+  @keyframes agIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes agRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  html.gate-leaving #access-gate { opacity: 0; transition: opacity .72s cubic-bezier(.4, 0, .2, 1); pointer-events: none; }
+  html.gate-leaving #access-gate .ag-frame { transform: translateY(-8px); transition: transform .72s cubic-bezier(.4, 0, .2, 1); }
+
+  @media (max-width: 540px) {
+    #access-gate { padding: 22px 18px 18px; }
+    #access-gate .ag-word { font-size: 12px; letter-spacing: .3em; }
+    #access-gate .ag-sub { font-size: 9.5px; letter-spacing: .2em; }
+    #access-gate .ag-title { font-size: clamp(23px, 6.6vw, 29px); }
+    #access-gate .ag-note { font-size: 13px; }
+    #access-gate .ag-form { width: 100%; }
+    #access-gate input.ag-in { font-size: 19px; letter-spacing: .34em; text-indent: .34em; }
+    #access-gate .ag-foot { flex-direction: column; align-items: flex-start; gap: 5px; font-size: 8.5px; letter-spacing: .16em; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #access-gate .ag-sheen { animation: none; }
+    html.gate-locked #access-gate,
+    html.gate-locked #access-gate .ag-frame { animation: none; }
+    #access-gate .ag-field.is-shake { animation: none; }
+    html.gate-leaving #access-gate,
+    html.gate-leaving #access-gate .ag-frame { transition: none; }
+  }
+</style>
+<!-- nextab-gate:head:end -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Potatosome® · Plant exosomes that repair and defend the skin barrier">
 <meta property="og:description" content="Nextab, Inc.'s plant exosome platform, starting with potato. Enter ALVORA LAB for the clinical evidence and the finished products.">
@@ -115,6 +458,313 @@ html[lang=ko] .sub{max-width:31em}
 </style>
 </head>
 <body>
+<!-- nextab-gate:body:start -->
+<div id="access-gate" role="dialog" aria-modal="true" aria-labelledby="agTitle" aria-describedby="agNote" lang="ko">
+  <span class="ag-sheen" aria-hidden="true"></span>
+  <span class="ag-frame-line" aria-hidden="true"></span>
+  <div class="ag-frame">
+    <div class="ag-top">
+      <div class="ag-brand">
+        <span class="ag-word">Nextab, Inc.</span>
+        <span class="ag-sub">Potatosome<sup>&reg;</sup><span class="ag-dot" aria-hidden="true">&middot;</span>ALVORA LAB</span>
+      </div>
+      <div class="ag-lang" role="group" aria-label="Language">
+        <button type="button" data-ag-lang="ko" aria-pressed="true">KO</button>
+        <span class="ag-bar" aria-hidden="true"></span>
+        <button type="button" data-ag-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <div class="ag-main">
+      <span class="ag-rule" aria-hidden="true"></span>
+      <p class="ag-eyebrow" data-ag="eyebrow">Private access</p>
+      <h1 class="ag-title" id="agTitle" data-ag="title">비공개 페이지입니다</h1>
+      <p class="ag-note" id="agNote" data-ag="note">관계자에게 안내된 비밀번호를 입력해 주세요.</p>
+
+      <form class="ag-form" id="agForm" novalidate autocomplete="off">
+        <label class="ag-lab" for="agInput" data-ag="label">Passcode</label>
+        <div class="ag-field" id="agField">
+          <input class="ag-in" id="agInput" name="passcode" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="&bull;&bull;&bull;&bull;" aria-describedby="agMsg" autofocus>
+          <button class="ag-btn" type="submit" id="agBtn" data-ag="btn">확인</button>
+        </div>
+        <p class="ag-msg" id="agMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="ag-foot">
+      <span>Nextab, Inc.<span class="ag-dot" aria-hidden="true">&middot;</span>Potatosome&reg;<span class="ag-dot" aria-hidden="true">&middot;</span>ALVORA LAB</span>
+      <span>Confidential<span class="ag-dot" aria-hidden="true">&middot;</span>2026</span>
+    </div>
+  </div>
+</div>
+<script id="access-gate-js">
+(function () {
+  'use strict';
+  var KEY = 'nextab_exosome_unlocked_v1';
+  /* Only the SHA-256 of the passcode lives in the page; the passcode itself is never written here. */
+  var PASS_HASH = '0e0c8d9c5fa46e66bd8293289e410bbc9e35da10a211a4d5c3e0b64a373db54f';
+
+  var gate = document.getElementById('access-gate');
+  var root = document.documentElement;
+  if (!gate) return;
+  if (window.__nextabGateUnlocked) {
+    if (gate.parentNode) gate.parentNode.removeChild(gate);
+    return;
+  }
+
+  var form  = document.getElementById('agForm');
+  var field = document.getElementById('agField');
+  var input = document.getElementById('agInput');
+  var btn   = document.getElementById('agBtn');
+  var msg   = document.getElementById('agMsg');
+
+  var COPY = {
+    ko: {
+      eyebrow: 'Private access',
+      title: '비공개 페이지입니다',
+      note: '관계자에게 안내된 비밀번호를 입력해 주세요.',
+      label: 'Passcode',
+      btn: '확인',
+      ph: '\u2022\u2022\u2022\u2022',
+      empty: '비밀번호를 입력해 주세요.',
+      err: '비밀번호가 일치하지 않습니다. 다시 확인해 주세요.'
+    },
+    en: {
+      eyebrow: 'Private access',
+      title: 'This page is private',
+      note: 'Enter the passcode shared with you.',
+      label: 'Passcode',
+      btn: 'Enter',
+      ph: '\u2022\u2022\u2022\u2022',
+      empty: 'Please enter the passcode.',
+      err: 'That passcode does not match. Please try again.'
+    }
+  };
+
+  function readLang() {
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      if (q === 'en' || q === 'ko') return q;
+    } catch (e) {}
+    var h = (location.hash || '').toLowerCase();
+    if (h === '#en' || h === '#ko') return h.slice(1);
+    try {
+      var a = localStorage.getItem('alvora.lang');
+      if (a === 'en' || a === 'ko') return a;
+      var p = localStorage.getItem('potatosome.lang');
+      if (p === 'en' || p === 'ko') return p;
+    } catch (e) {}
+    var hl = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    if (hl.indexOf('en') === 0) return 'en';
+    if (hl.indexOf('ko') === 0) return 'ko';
+    return 'ko';
+  }
+
+  var lang = readLang();
+
+  function each(sel, fn) {
+    Array.prototype.forEach.call(gate.querySelectorAll(sel), fn);
+  }
+
+  var lastMsg = '';
+
+  function paint() {
+    var c = COPY[lang];
+    each('[data-ag]', function (el) { el.textContent = c[el.getAttribute('data-ag')]; });
+    if (btn) btn.textContent = c.btn;
+    if (input) input.placeholder = c.ph;
+    if (msg) msg.textContent = lastMsg === 'empty' ? c.empty : (lastMsg === 'err' ? c.err : '');
+    gate.setAttribute('lang', lang);
+    each('[data-ag-lang]', function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-ag-lang') === lang ? 'true' : 'false');
+    });
+  }
+
+  /* the page keeps its own language switch; the gate asks it to follow, so the
+     unlocked page opens in the language chosen here */
+  function syncPageLang() {
+    var cur = (document.documentElement.getAttribute('lang') || '').toLowerCase().indexOf('en') === 0 ? 'en' : 'ko';
+    if (cur === lang) return;
+    var b = document.querySelector('[data-lang-btn="' + lang + '"]');
+    if (b) { b.click(); return; }
+    var lg = document.getElementById('lg');
+    if (lg) lg.click();
+  }
+
+  each('[data-ag-lang]', function (b) {
+    b.addEventListener('click', function () {
+      var next = b.getAttribute('data-ag-lang');
+      if (next === lang) return;
+      lang = next === 'en' ? 'en' : 'ko';
+      try {
+        localStorage.setItem('alvora.lang', lang);
+        localStorage.setItem('potatosome.lang', lang);
+      } catch (e) {}
+      paint();
+      syncPageLang();
+      if (input) input.focus();
+    });
+  });
+
+  /* ---------- SHA-256 (crypto.subtle, with a pure-JS fallback for http/older browsers) ---------- */
+  var K = [
+    0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
+    0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
+    0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da,
+    0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967,
+    0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,
+    0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,
+    0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
+    0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
+  ];
+
+  function ror(x, n) { return (x >>> n) | (x << (32 - n)); }
+
+  function sha256Fallback(str) {
+    var H = [0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19];
+    var bytes = [], i, c;
+    for (i = 0; i < str.length; i++) {
+      c = str.charCodeAt(i);
+      if (c < 0x80) bytes.push(c);
+      else if (c < 0x800) bytes.push(0xc0 | (c >> 6), 0x80 | (c & 63));
+      else if (c >= 0xd800 && c <= 0xdbff && i + 1 < str.length) {
+        var c2 = str.charCodeAt(++i);
+        c = 0x10000 + (((c & 1023) << 10) | (c2 & 1023));
+        bytes.push(0xf0 | (c >> 18), 0x80 | ((c >> 12) & 63), 0x80 | ((c >> 6) & 63), 0x80 | (c & 63));
+      } else bytes.push(0xe0 | (c >> 12), 0x80 | ((c >> 6) & 63), 0x80 | (c & 63));
+    }
+    var bits = bytes.length * 8;
+    bytes.push(0x80);
+    while (bytes.length % 64 !== 56) bytes.push(0);
+    var hi = Math.floor(bits / 4294967296), lo = bits >>> 0;
+    bytes.push((hi >>> 24) & 255, (hi >>> 16) & 255, (hi >>> 8) & 255, hi & 255,
+               (lo >>> 24) & 255, (lo >>> 16) & 255, (lo >>> 8) & 255, lo & 255);
+    var w = new Array(64), off, a, b, cc, d, e, f, g, h, t1, t2, s0, s1;
+    for (off = 0; off < bytes.length; off += 64) {
+      for (i = 0; i < 16; i++) {
+        w[i] = (bytes[off + i * 4] << 24) | (bytes[off + i * 4 + 1] << 16) | (bytes[off + i * 4 + 2] << 8) | bytes[off + i * 4 + 3];
+      }
+      for (i = 16; i < 64; i++) {
+        s0 = ror(w[i - 15], 7) ^ ror(w[i - 15], 18) ^ (w[i - 15] >>> 3);
+        s1 = ror(w[i - 2], 17) ^ ror(w[i - 2], 19) ^ (w[i - 2] >>> 10);
+        w[i] = (w[i - 16] + s0 + w[i - 7] + s1) | 0;
+      }
+      a = H[0]; b = H[1]; cc = H[2]; d = H[3]; e = H[4]; f = H[5]; g = H[6]; h = H[7];
+      for (i = 0; i < 64; i++) {
+        t1 = (h + (ror(e, 6) ^ ror(e, 11) ^ ror(e, 25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0;
+        t2 = ((ror(a, 2) ^ ror(a, 13) ^ ror(a, 22)) + ((a & b) ^ (a & cc) ^ (b & cc))) | 0;
+        h = g; g = f; f = e; e = (d + t1) | 0; d = cc; cc = b; b = a; a = (t1 + t2) | 0;
+      }
+      H[0] = (H[0] + a) | 0; H[1] = (H[1] + b) | 0; H[2] = (H[2] + cc) | 0; H[3] = (H[3] + d) | 0;
+      H[4] = (H[4] + e) | 0; H[5] = (H[5] + f) | 0; H[6] = (H[6] + g) | 0; H[7] = (H[7] + h) | 0;
+    }
+    var out = '';
+    for (i = 0; i < 8; i++) out += ('00000000' + (H[i] >>> 0).toString(16)).slice(-8);
+    return out;
+  }
+
+  function sha256Hex(str) {
+    var subtle = window.crypto && window.crypto.subtle;
+    if (subtle && subtle.digest && window.TextEncoder) {
+      try {
+        return subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+          var b = new Uint8Array(buf), s = '', i;
+          for (i = 0; i < b.length; i++) s += ('0' + b[i].toString(16)).slice(-2);
+          return s;
+        })['catch'](function () { return sha256Fallback(str); });
+      } catch (e) {}
+    }
+    return Promise.resolve(sha256Fallback(str));
+  }
+
+  /* ---------- feedback ---------- */
+  function showMsg(kind) {
+    lastMsg = kind || '';
+    if (!msg) return;
+    msg.textContent = kind === 'empty' ? COPY[lang].empty : (kind === 'err' ? COPY[lang].err : '');
+    msg.classList.toggle('is-on', !!kind);
+  }
+
+  function reject(kind) {
+    showMsg(kind);
+    if (input) {
+      input.setAttribute('aria-invalid', 'true');
+      input.value = '';
+    }
+    if (field) {
+      field.classList.remove('is-shake');
+      void field.offsetWidth;
+      field.classList.add('is-shake');
+    }
+    if (input) input.focus();
+  }
+
+  /* ---------- unlock ---------- */
+  function open() {
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    window.__nextabGateUnlocked = true;
+    root.style.removeProperty('background-color');
+    root.style.removeProperty('color-scheme');
+    root.classList.remove('gate-locked');
+    root.classList.add('gate-leaving');
+    window.scrollTo(0, 0);
+    setTimeout(function () {
+      if (gate.parentNode) gate.parentNode.removeChild(gate);
+      root.classList.remove('gate-leaving');
+    }, 760);
+    var kick = function () {
+      try { window.dispatchEvent(new Event('resize')); } catch (e) {}
+      try { window.dispatchEvent(new Event('scroll')); } catch (e) {}
+    };
+    setTimeout(kick, 40);
+    setTimeout(kick, 260);
+    setTimeout(kick, 900);
+    var main = document.getElementById('main') || document.querySelector('main') || document.getElementById('hero');
+    if (main) {
+      if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+      try { main.focus({ preventScroll: true }); } catch (e) { try { main.focus(); } catch (e2) {} }
+    }
+  }
+
+  function check() {
+    var v = input ? input.value.replace(/\s+/g, '') : '';
+    if (!v) { reject('empty'); return; }
+    showMsg('');
+    if (btn) btn.disabled = true;
+    sha256Hex(v).then(function (h) {
+      if (h === PASS_HASH) {
+        if (input) input.value = '';
+        open();
+      } else {
+        if (btn) btn.disabled = false;
+        reject('err');
+      }
+    }, function () {
+      if (btn) btn.disabled = false;
+      reject('err');
+    });
+  }
+
+  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); check(); });
+  if (input) {
+    input.addEventListener('input', function () {
+      if (input.getAttribute('aria-invalid') === 'true') {
+        input.removeAttribute('aria-invalid');
+        showMsg('');
+      }
+    });
+    setTimeout(function () { try { input.focus({ preventScroll: true }); } catch (e) {} }, 60);
+  }
+
+  paint();
+})();
+</script>
+<!-- nextab-gate:body:end -->
+
+
+
+
+
 <nav>
   <b>✦ Potatosome</b>
   <div class="links">
