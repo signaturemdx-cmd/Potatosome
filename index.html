@@ -3,278 +3,300 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Plant exosomes that repair and defend the skin barrier">
-<meta property="og:description" content="Exosomes from edible plants, starting with potato, that calm irritated skin and rebuild its barrier at the same time.">
+<meta property="og:title" content="Potatosome® · Plant exosomes that repair and defend the skin barrier">
+<meta property="og:description" content="Nextab's plant exosome platform, starting with potato. Enter ALVORA LAB for the clinical evidence and the finished products.">
+<meta name="description" content="Potatosome® — plant exosomes from edible plants, starting with potato, that calm irritated skin and rebuild its barrier at the same time. Entry point to ALVORA LAB evidence and products.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E">
-<title>Plant exosomes that repair and defend the skin barrier</title>
-<meta name="description" content="Exosomes from edible plants, starting with potato, that calm irritated skin and rebuild its barrier at the same time.">
+<title>Potatosome® · Plant exosomes that repair and defend the skin barrier</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&family=Noto+Sans+KR:wght@300;400;500&display=swap">
 <style>
-:root{--bg:#06090a;--fg:#eef2ef;--mut:#8d9d98;--ac:#5fd3b8;--ac2:#2a7f72;--line:rgba(255,255,255,.1);--glass:rgba(22,34,32,.5);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 "Hanken Grotesk","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+:root{--bg:#06090a;--fg:#eef2ef;--mut:#8d9d98;--ac:#5fd3b8;--ac2:#2a7f72;--line:rgba(255,255,255,.1);--glass:rgba(22,34,32,.5);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 "Hanken Grotesk","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
 h1,h2,h3{font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0}
 p{margin:0}a{color:inherit;text-decoration:none}
 .mono{font:400 12px/1.4 "IBM Plex Mono",ui-monospace,Menlo,monospace;color:var(--mut)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 .glass{background:var(--glass);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
-.pill{display:inline-flex;align-items:center;gap:10px;padding:6px 20px 6px 6px;border-radius:99px;background:linear-gradient(90deg,var(--ac2),#1c4f55);border:1px solid rgba(255,255,255,.18);font-weight:500;font-size:14px;cursor:pointer;color:#fff;font-family:inherit}
-.pill i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-style:normal;font-size:12px}
-.pill.ghost{background:none;padding:6px 20px}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(14px + env(safe-area-inset-top,0px)) 24px 14px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(var(--bg),transparent)}
-nav .links{display:flex;gap:28px;font-size:14px;color:#c6d1cd}
-nav b{font-weight:600;letter-spacing:-.02em}
-@media(max-width:820px){nav .links{display:none}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(14px + env(safe-area-inset-top,0px)) 24px 14px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(var(--bg),rgba(6,9,10,0))}
+nav b{font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+nav .links{display:flex;gap:26px;font-size:14px;color:#c6d1cd}
+nav .links a{position:relative;padding:2px 0}
+nav .links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav .links a:hover{color:#fff}
+nav .links a:hover::after{transform:scaleX(1)}
+@media(max-width:880px){nav .links{display:none}}
+
 #hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:
 radial-gradient(60% 50% at 70% 30%,rgba(95,211,184,.16),transparent 70%),
 radial-gradient(40% 40% at 100% 100%,rgba(42,127,114,.35),transparent 70%),
 linear-gradient(180deg,#0a1210,#050708 70%)}
-#hero::before{content:"";position:absolute;inset:0;background:conic-gradient(from 200deg at 30% -10%,transparent 0 8%,rgba(200,240,230,.10) 12%,transparent 18% 100%);filter:blur(18px)}
-#cv{position:absolute;inset:0;width:100%;height:100%}
-.hero-in{position:relative;z-index:2;padding-top:90px;padding-bottom:150px}
-h1{font-size:clamp(40px,6vw,84px);max-width:9.5em}
-.sub{max-width:30em;color:#b9c6c2;margin:22px 0 30px}
-.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.trust{margin-top:26px}
-.wid{position:absolute;z-index:3;right:6%;padding:14px 16px;width:200px}
-.wid b{display:block;font-size:28px;font-weight:500;letter-spacing:-.03em;margin-top:4px}
+#hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:conic-gradient(from 200deg at 30% -10%,transparent 0 8%,rgba(200,240,230,.10) 12%,transparent 18% 100%);filter:blur(18px)}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-in{position:relative;z-index:2;width:100%;padding-top:104px;padding-bottom:172px}
+h1{font-size:clamp(38px,5.6vw,80px);max-width:9.5em}
+.sub{max-width:30em;color:#b9c6c2;margin:20px 0 26px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btns{margin-top:20px}
+.ctas{margin-top:30px}
+.trust{margin-top:26px;max-width:34em}
+.hb{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--fg);font:500 14px "Hanken Grotesk","Noto Sans KR",system-ui,sans-serif;cursor:pointer;transition:border-color .25s,background .25s}
+.hb:hover{border-color:rgba(95,211,184,.5);background:rgba(95,211,184,.08)}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 20px 7px 7px;border-radius:99px;background:linear-gradient(90deg,var(--ac2),#1c4f55);border:1px solid rgba(255,255,255,.18);font-weight:500;font-size:14.5px;color:#fff;font-family:inherit;transition:filter .25s,transform .25s}
+.pill i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-style:normal;font-size:13px;flex:none}
+.pill:hover{filter:brightness(1.15)}
+.pill.ghost{background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.22);color:#dfe9e5}
+.pill.ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(95,211,184,.5)}
+#lg{padding:7px 14px !important;font-size:13px}
+
+.wids{position:absolute;z-index:3;right:6%;top:15%;width:204px;display:flex;flex-direction:column;gap:14px}
+.wid{display:block;padding:14px 16px;width:100%;color:inherit;cursor:pointer;background:rgba(10,20,18,.72);transition:border-color .3s,transform .3s,box-shadow .3s}
+.wid:hover,.wid:focus-visible{border-color:rgba(95,211,184,.55);transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}
+.wid b{display:block;font-size:28px;font-weight:500;letter-spacing:-.03em;margin-top:4px;color:var(--ac)}
 .wid svg{display:block;margin-top:6px}
-#w1{top:15%}#w2{top:34%;right:12%}
-@media(max-width:900px){.wid{display:none}}
-.cap{position:absolute;z-index:3;right:24px;bottom:150px;display:flex;gap:10px;align-items:center}
-.cap button{background:none;border:1px solid var(--line);color:var(--fg);width:28px;height:28px;border-radius:50%;cursor:pointer}
-.hb{display:inline-flex;align-items:center;padding:11px 18px;border-radius:12px;background:linear-gradient(90deg,var(--ac2),#1c4f55);border:1px solid rgba(255,255,255,.18);color:#fff;font:500 14px "Hanken Grotesk","Noto Sans KR",system-ui,sans-serif;cursor:pointer}.hb:hover{filter:brightness(1.2)}
-.hot{position:absolute;z-index:3;font:12px "IBM Plex Mono",monospace;color:#d8efe8;background:rgba(10,20,18,.55);border:1px solid var(--line);border-radius:99px;padding:5px 10px;cursor:pointer}
-#h1{left:56%;top:26%}#h2{left:48%;top:66%}
-@media(max-width:900px){#h1{left:auto;right:16px;top:20%}#h2{left:auto;right:16px;top:30%}.cap{bottom:200px}}
-.mq{position:absolute;z-index:3;left:0;right:0;bottom:62px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
-.mq div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;color:#c6d1cd;font-weight:500}
+.wid .go{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid var(--line);color:#c9e6dd;font-size:11px;letter-spacing:.02em}
+.wid .go em{font-style:normal;color:var(--ac);transition:transform .3s}
+.wid:hover .go em{transform:translateX(3px)}
+#w2{transform:translateX(-14%)}
+#w2:hover,#w2:focus-visible{transform:translate(-14%,-3px)}
+@media(max-width:980px){.wids{display:none}}
+
+.cap{position:absolute;z-index:3;right:24px;bottom:150px;display:flex;gap:10px;align-items:center;background:rgba(10,20,18,.4);border:1px solid var(--line);border-radius:99px;padding:4px 8px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.cap button{background:none;border:1px solid var(--line);color:var(--fg);width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:13px;line-height:1}
+.cap button:hover{border-color:var(--ac);color:var(--ac)}
+.cap span{font-size:11px;white-space:nowrap}
+
+.mq{position:absolute;z-index:3;left:0;right:0;bottom:60px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+.mq div{display:flex;gap:56px;width:max-content;animation:mq 32s linear infinite;color:#c6d1cd;font-weight:500;font-size:14px}
 @keyframes mq{to{transform:translateX(-50%)}}
 .chips{position:absolute;z-index:3;left:24px;right:24px;bottom:12px;display:flex;gap:10px;overflow:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
 .chips span{white-space:nowrap;padding:6px 14px;border:1px solid var(--line);border-radius:10px;font-size:13px;color:#b9c6c2;background:rgba(255,255,255,.03)}
-section{padding:120px 0}
-h2{font-size:clamp(30px,4.2vw,56px);max-width:15em}
-.lead{color:var(--mut);max-width:34em;margin-top:18px}
-.grid{display:grid;gap:16px;margin-top:48px}
-.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}
-@media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
-.card{padding:26px;display:flex;flex-direction:column;gap:10px;min-height:190px}
-.card h3{font-size:22px;letter-spacing:-.02em}.card p{color:#a9b8b3;font-size:15px}
-.orb{width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d9fff4,var(--ac2) 55%,#0b2a2a);box-shadow:0 0 40px rgba(95,211,184,.3)}
-.orb.crack{background:radial-gradient(circle at 35% 30%,#e6e9e8,#59666a 55%,#101719);box-shadow:none}
-.dual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;position:relative}
-.dual .card{min-height:260px}.dual .big{font-size:clamp(40px,5vw,64px);letter-spacing:-.04em;color:var(--ac)}
-@media(max-width:820px){.dual{grid-template-columns:1fr}}
-.stat{font-size:clamp(44px,6vw,80px);font-weight:300;letter-spacing:-.05em;color:var(--fg)}
-.bar{height:6px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:8px}
-.bar i{display:block;height:100%;width:0;background:var(--ac);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
-.bar i.b2{background:#c9d4d0}
-.pubs a{padding:22px;display:block}.pubs h3{font-size:18px;margin:8px 0}
-.pubs a:hover{border-color:rgba(95,211,184,.5)}
-.tabs{display:flex;gap:8px;margin-top:40px;flex-wrap:wrap}
-.tabs button{font:inherit;color:var(--fg);background:none;border:1px solid var(--line);border-radius:99px;padding:8px 18px;cursor:pointer}
-.tabs button[aria-selected=true]{background:var(--ac);color:#04110e;border-color:var(--ac)}
-.panel{margin-top:20px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.panel ul{margin:12px 0 0;padding-left:18px;color:#b9c6c2}
-.panel .orb{width:150px;height:150px;margin:auto}
-@media(max-width:820px){.panel{grid-template-columns:1fr}}
-#inv{background:radial-gradient(70% 60% at 80% 40%,rgba(42,127,114,.28),transparent 70%),#05080a;position:relative}
-.snap{padding:28px;max-width:520px}
-.snap dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:16px 0 22px;font-size:15px}
-.snap dt{color:var(--mut)}.snap dd{margin:0}
-details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-size:18px;font-weight:500}
-details p{color:#a9b8b3;margin-top:10px;max-width:42em}
-form{padding:30px;max-width:720px;margin:44px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-form .f{grid-column:1/-1}
-input,select,textarea{width:100%;font:inherit;color:var(--fg);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-label span{display:block;margin-bottom:6px}
-@media(max-width:620px){form{grid-template-columns:1fr}}
-#cta{background:linear-gradient(rgba(6,9,10,.5),rgba(6,9,10,.9)),radial-gradient(60% 70% at 50% 0,rgba(95,211,184,.18),transparent 70%);text-align:center}
-#cta h2{margin:0 auto}
-#ok{display:none;text-align:center;padding:40px;max-width:720px;margin:44px auto 0}
-footer{padding:70px 0 0;overflow:hidden}
-.fc{display:flex;gap:56px;flex-wrap:wrap;justify-content:space-between}
-.fc ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;color:#b9c6c2;font-size:14px}
-.word{font-size:clamp(40px,14vw,230px);font-weight:600;letter-spacing:-.06em;line-height:.8;text-align:center;margin-top:60px;background:linear-gradient(#f2f4f1 55%,rgba(242,244,241,.04));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
-.legal{display:flex;justify-content:space-between;padding:18px 24px;border-top:1px solid var(--line)}
+
 #modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:rgba(0,0,0,.55);padding:20px}
 #modal.on{display:grid}
-#modal .glass{max-width:460px;padding:26px;position:relative;background:rgba(18,30,28,.92)}
-#modal .orb{width:120px;height:120px;margin:0 auto 18px}
-#modal h3{font-size:24px;margin-bottom:10px}
-#x{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--line);color:var(--fg);width:30px;height:30px;border-radius:50%;cursor:pointer}
-html[lang=ko] body{word-break:keep-all}html[lang=ko] h1,html[lang=ko] h2,html[lang=ko] .stat{letter-spacing:-.01em}html[lang=ko] h1{max-width:12em;font-size:clamp(34px,5vw,68px);line-height:1.15}html[lang=ko] h2{line-height:1.2}
-.rv{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.mq div{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+#modal .glass{max-width:460px;padding:26px;position:relative;background:rgba(18,30,28,.94)}
+#modal .orb{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;background:radial-gradient(circle at 35% 30%,#d9fff4,var(--ac2) 55%,#0b2a2a);box-shadow:0 0 40px rgba(95,211,184,.3)}
+#modal h3{font-size:23px;margin-bottom:10px}
+#modal p{color:#b9c6c2;font-size:15px}
+#x{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--line);color:var(--fg);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:15px;line-height:1}
+#x:hover{border-color:var(--ac);color:var(--ac)}
+
+footer{border-top:1px solid var(--line);background:#050708}
+footer .f{display:flex;align-items:center;justify-content:space-between;gap:10px 22px;flex-wrap:wrap;padding:18px 0;font-size:13px;color:#a9b8b3}
+footer .f a{color:#cfe7df}
+footer .f a:hover{color:var(--ac)}
+footer .f span{min-width:0}
+
+html[lang=ko] body{word-break:keep-all}
+html[lang=ko] h1{max-width:13em;font-size:clamp(30px,4.6vw,60px);line-height:1.16;letter-spacing:-.02em}
+html[lang=ko] .sub{max-width:31em}
+@media(max-width:620px){
+  .hero-in{padding-top:88px;padding-bottom:150px}
+  .sub{font-size:15px}
+  .btns{gap:8px;margin-top:18px}
+  .hb{padding:10px 15px;font-size:13.5px}
+  .ctas{gap:9px;margin-top:24px}
+  .pill{font-size:13.5px;padding:6px 16px 6px 6px}
+  .pill i{width:26px;height:26px}
+  .cap{bottom:118px;right:16px}
+  .mq{bottom:56px}
+  .chips{bottom:10px;left:16px;right:16px}
+  footer .f{padding:16px 0}
+}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}html{scroll-behavior:auto}.wid,.pill{transition:none}}
 </style>
 </head>
 <body>
-<nav><b>✦ Potatosome</b><div class="links"><a href="#science">Science</a><a href="#portfolio">Ingredient</a><a href="#services">Services</a><a href="#about">Company</a><a href="#inv">Investors</a></div><button id="lg" class="hb" style="padding:7px 14px" aria-label="Language">한국어</button></nav>
+<nav>
+  <b>✦ Potatosome</b>
+  <div class="links">
+    <a data-alv="technology" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#technology" data-ko="기술" data-en="Technology">Technology</a>
+    <a data-alv="evidence" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#evidence" data-ko="근거" data-en="Evidence">Evidence</a>
+    <a data-alv="brand" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#brand" data-ko="브랜드 (ALVORA LAB)" data-en="Brand (ALVORA LAB)">Brand (ALVORA LAB)</a>
+    <a data-alv="contact" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#contact" data-ko="문의" data-en="Contact">Contact</a>
+  </div>
+  <button id="lg" class="hb" type="button" aria-label="한국어로 보기">한국어</button>
+</nav>
 
 <header id="hero">
 <canvas id="cv" aria-hidden="true"></canvas>
 <div class="wrap hero-in">
-<h1>Plant exosomes that repair and defend the skin barrier.</h1>
-<div class="row" style="margin-top:22px"><button class="hb" data-m="v">Why edible plants?</button><button class="hb" data-m="b">What it does for skin</button></div>
-<p class="sub">Exosomes from edible plants, starting with potato. They calm irritated skin and rebuild its barrier at the same time. Cosmetic benefits today, and a long-term goal: chronic inflammatory skin conditions.</p>
-<div class="row"><a class="pill" href="#cta"><i>›</i>Request</a><a class="pill ghost" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lan=en#top" target="_blank" rel="noopener" style="border-color:var(--line)">Evidence-based BioCosmetics</a></div>
-<p class="mono trust">Ingredient name registered in the USA, Japan, China and Korea · 3 peer-reviewed papers</p>
+  <h1 data-en="Plant exosomes that repair and defend the skin barrier." data-ko="피부 장벽을 회복하고 지켜주는 식물 엑소좀.">Plant exosomes that repair and defend the skin barrier.</h1>
+  <div class="row btns">
+    <button class="hb" type="button" data-m="v" data-en="Why edible plants?" data-ko="왜 식용 식물일까요?">Why edible plants?</button>
+    <button class="hb" type="button" data-m="b" data-en="What it does for skin" data-ko="피부에 어떤 작용을 할까요?">What it does for skin</button>
+  </div>
+  <p class="sub" data-en="Exosomes from edible plants, starting with potato. They calm irritated skin and rebuild its barrier at the same time. Cosmetic benefits today, and a long-term goal: chronic inflammatory skin conditions." data-ko="감자에서 시작하는 식용 식물 엑소좀. 자극받은 피부를 진정시키고 피부 장벽을 동시에 재건합니다. 오늘은 화장품 효능으로, 장기 목표는 만성 염증성 피부 컨디션입니다.">Exosomes from edible plants, starting with potato. They calm irritated skin and rebuild its barrier at the same time. Cosmetic benefits today, and a long-term goal: chronic inflammatory skin conditions.</p>
+  <div class="row ctas">
+    <a class="pill" id="cta1" data-alv="top" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#top"><i>›</i><span data-en="ALVORA LAB · Evidence &amp; Products →" data-ko="ALVORA LAB · 임상 근거 및 완제품 보기 →">ALVORA LAB · Evidence &amp; Products →</span></a>
+    <a class="pill ghost" id="cta2" data-alv="contact" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/?lang=en#contact"><i>›</i><span data-en="B2B Inquiry · Raw &amp; Finished" data-ko="원료·완제품 B2B 상담">B2B Inquiry · Raw &amp; Finished</span></a>
+  </div>
+  <p class="mono trust" data-en="Ingredient name registered in the USA, Japan, China and Korea · 3 peer-reviewed papers" data-ko="미국·일본·중국·한국 원료명 등재 · 국제 논문 3편">Ingredient name registered in the USA, Japan, China and Korea · 3 peer-reviewed papers</p>
 </div>
-<div class="wid glass" id="w1"><span class="mono">Skin temperature right after use, n=21</span><b>−11.6%</b><svg width="160" height="26" viewBox="0 0 160 26"><path d="M2 22C30 22 40 18 64 14S110 6 158 3" fill="none" stroke="#5fd3b8" stroke-width="2"/></svg></div>
-<div class="wid glass" id="w2"><span class="mono">Wrinkle depth</span><b>−10.7%</b><span class="mono">human test, n=21, 2 weeks</span></div>
 
-<div class="cap mono"><button id="pv" aria-label="Previous shape">‹</button><span id="cn">Source: potato</span><button id="nx" aria-label="Next shape">›</button></div>
-<div class="mq" aria-label="Registrations"><div id="mqi"><span>INCI · USA</span><span>JCIA · Japan</span><span>NMPA · China</span><span>KCA · Korea</span><span>Peer-reviewed</span></div></div>
-<div class="chips"><span>Anti-aging</span><span>Barrier repair</span><span>Soothing</span><span>UV-stress defense</span><span>Hydration</span></div>
+<div class="wids">
+<a class="wid glass" id="w1" data-clin="cooling" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/evidence/clinical.html?lang=en#cooling" data-aria-en="Skin temperature, −11.6% — open the clinical cooling evidence" data-aria-ko="피부 표면온도 −11.6% — 임상 쿨링 근거 보기">
+  <span class="mono" data-en="Skin temperature right after use, n=21" data-ko="사용 직후 피부 표면온도, n=21">Skin temperature right after use, n=21</span>
+  <b>−11.6%</b>
+  <svg width="160" height="26" viewBox="0 0 160 26" aria-hidden="true"><path d="M2 22C30 22 40 18 64 14S110 6 158 3" fill="none" stroke="#5fd3b8" stroke-width="2"/></svg>
+  <span class="go mono"><span data-en="Clinical evidence" data-ko="임상 근거 보기">Clinical evidence</span><em>›</em></span>
+</a>
+<a class="wid glass" id="w2" data-clin="wrinkle" href="https://signaturemdx-cmd.github.io/ALVORA_LAB/evidence/clinical.html?lang=en#wrinkle" data-aria-en="Wrinkle depth, −10.7% — open the clinical wrinkle evidence" data-aria-ko="주름 깊이 −10.7% — 임상 주름 근거 보기">
+  <span class="mono" data-en="Wrinkle depth" data-ko="주름 깊이">Wrinkle depth</span>
+  <b>−10.7%</b>
+  <span class="mono" data-en="human test, n=21, 2 weeks" data-ko="인체적용시험, n=21, 2주">human test, n=21, 2 weeks</span>
+  <span class="go mono"><span data-en="Clinical evidence" data-ko="임상 근거 보기">Clinical evidence</span><em>›</em></span>
+</a>
+</div>
+
+<div class="cap mono"><button id="pv" type="button" aria-label="Previous shape">‹</button><span id="cn">Source: potato</span><button id="nx" type="button" aria-label="Next shape">›</button></div>
+<div class="mq" aria-hidden="true"><div id="mqi"><span>INCI · USA</span><span>JCIA · Japan</span><span>NMPA · China</span><span>KCA · Korea</span><span>Peer-reviewed</span></div></div>
+<div class="chips"><span data-en="Anti-aging" data-ko="안티에이징">Anti-aging</span><span data-en="Barrier repair" data-ko="장벽 케어">Barrier repair</span><span data-en="Soothing" data-ko="진정">Soothing</span><span data-en="UV-stress defense" data-ko="자외선 스트레스 방어">UV-stress defense</span><span data-en="Hydration" data-ko="수분">Hydration</span></div>
 </header>
 
-<section><div class="wrap">
-<h2 class="rv">Irritated skin and a weak barrier feed each other.</h2>
-<div class="grid g3">
-<div class="card glass rv"><div class="orb crack"></div><h3>Inflammation breaks the barrier</h3><p>Every flare-up leaves skin a little weaker than before.</p></div>
-<div class="card glass rv"><div class="orb crack"></div><h3>A weak barrier lets irritants in</h3><p>Moisture escapes, triggers get through, and skin reacts again.</p></div>
-<div class="card glass rv"><div class="orb crack"></div><h3>The loop never settles</h3><p>That cycle is why sensitive, chronically inflamed skin is so hard to calm. Fixing only one side is not enough.</p></div>
-</div></div></section>
+<footer><div class="wrap f">
+  <span data-en="Nextab Inc. · CEO Chris Paul · <a href=&quot;mailto:exosomekorea@gmail.com&quot;>exosomekorea@gmail.com</a>" data-ko="넥스탭 주식회사(Nextab Inc.) · 대표 Chris Paul · <a href=&quot;mailto:exosomekorea@gmail.com&quot;>exosomekorea@gmail.com</a>">Nextab Inc. · CEO Chris Paul · <a href="mailto:exosomekorea@gmail.com">exosomekorea@gmail.com</a></span>
+  <span class="mono">Potatosome® · ALVORA LAB</span>
+</div></footer>
 
-<section id="science" style="padding-top:20px"><div class="wrap">
-<h2 class="rv">Calm the inflammation. Rebuild the barrier. At the same time.</h2>
-<p class="lead rv">Cosmetic benefits already shown in human tests today. Our research direction: chronic inflammatory skin conditions, where calming and rebuilding have to happen together.</p><div class="dual">
-<div class="card glass rv"><span class="mono">Calms</span><div class="big">Less inflammation</div><p>Lowers key inflammatory signals (TNF-α, IL-6) in skin cell models, including UV-stressed cells.</p></div>
-<div class="card glass rv"><span class="mono">Rebuilds</span><div class="big">A stronger barrier</div><p>Raises the genes that build the skin barrier and hold in water (FLG, TGM1, AQP3, HAS) in skin cells.</p></div>
-</div></div></section>
-
-<section style="padding-top:20px"><div class="wrap">
-<span class="mono">Evidence</span>
-<h2 class="rv" style="margin-top:10px">Three peer-reviewed papers and a human skin test.</h2>
-<div class="grid g3">
-<div class="card glass rv"><span class="mono">Wrinkle depth, human test n=21</span><div class="stat">−<span class="cu" data-to="10.7" data-d="1">0</span>%</div><p>After 2 weeks. Elasticity +5.7%. Company data.</p></div>
-<div class="card glass rv"><span class="mono">Viability after UVB</span><div class="bar"><i data-w="45" class="b2"></i></div><p class="mono">Untreated: 55% lost</p><div class="bar"><i data-w="90"></i></div><p class="mono">Pre-treated: 10% lost</p></div>
-<div class="card glass rv"><span class="mono">Safety</span><div class="stat">0</div><p>Irritation events in the human skin test (2025 paper). No cell toxicity up to 1,000 µg/mL.</p></div>
-</div>
-<div class="card glass rv" style="margin-top:16px;min-height:0"><h3>Barrier genes switched on, in skin cells</h3><p>HAS2 245% · TGM1 230% · AQP3 12,500%. Not every plant exosome performs alike: in the patent data, potato cut IL-6 by 74% and TNF-α by 77%, ahead of pear, radish and orange.</p></div>
-<div class="grid g3 pubs">
-<a class="glass" href="https://doi.org/10.3390/ph18040458" target="_blank" rel="noopener"><span class="mono">Pharmaceuticals, 2025</span><h3>Safety profile of Solanum tuberosum-derived exosomes</h3><p class="mono">In vitro and human skin tests · Read paper ›</p></a>
-<a class="glass" href="https://doi.org/10.3892/mmr.2023.13054" target="_blank" rel="noopener"><span class="mono">Mol Med Rep, 2023</span><h3>Potato exosomes against UVB photodamage in HaCaT cells</h3><p class="mono">Keratinocyte model · Read paper ›</p></a>
-<a class="glass" href="https://doi.org/10.37871/jbres2039" target="_blank" rel="noopener"><span class="mono">J Biomed Res Environ Sci</span><h3>Plant exosome screening for anti-inflammatory activity</h3><p class="mono">8 sources compared · Read paper ›</p></a>
-</div></div></section>
-
-<section id="portfolio" style="padding-top:20px"><div class="wrap">
-<h2 class="rv">From ingredient to finished product.</h2>
-<div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">Potatosome™ ingredient</button><button role="tab" aria-selected="false" data-t="1">Finished cosmetics</button><button role="tab" aria-selected="false" data-t="2">Where it is heading</button></div>
-<div class="panel glass" id="pn"><div><h3 id="pt" style="font-size:28px"></h3><ul id="pl"></ul></div><div class="orb"></div></div>
-</div></section>
-
-<section id="services" style="padding-top:20px"><div class="wrap">
-<h2 class="rv">Ways to work with us.</h2>
-<div class="grid g3">
-<div class="card glass rv"><h3>Ingredient supply</h3><p>Potatosome™ with specs, safety data and registration documents.</p></div>
-<div class="card glass rv"><h3>OEM/ODM formulation support</h3><p>Help fitting it into your serums, ampoules and creams.</p></div>
-<div class="card glass rv"><h3>Licensing and co-development</h3><p>Joint development of branded products and new indications.</p></div>
-</div>
-<p class="mono" style="margin-top:20px">Registered for cosmetic use through INCI-based routes in 40+ markets. Requirements vary by country.</p>
-</div></section>
-
-<section id="about" style="padding-top:20px"><div class="wrap">
-<div class="grid g2" style="margin-top:0;align-items:center">
-<div><span class="mono">Who is behind it</span><h2 style="margin-top:10px">Science from Seoul, since 2021.</h2><p class="lead">A research team turning edible plant exosomes into skin-care ingredients: cosmetics today, medical devices and therapeutics over time.</p></div>
-<div class="card glass"><h3>Shared with vetted partners</h3><p>Our technology and ingredient details are disclosed only to carefully vetted partners.</p></div>
-</div></div></section>
-
-<section id="inv"><div class="wrap">
-<span class="mono">Investors</span><h2 style="margin-top:10px">A platform with a published safety record.</h2>
-<div class="snap glass" style="margin-top:40px"><h3 style="font-size:22px">Investor snapshot</h3>
-<dl><dt>Platform</dt><dd>Cosmetics, then medical devices, then therapeutics</dd><dt>IP</dt><dd>Korean patent 10-2579898, granted Sep 2023</dd><dt>Registrations</dt><dd>INCI, JCIA, NMPA, KCA</dd><dt>Evidence</dt><dd>3 papers, human skin test n=21</dd><dt>Markets</dt><dd>40+ countries</dd></dl>
-<a class="pill" href="#cta"><i>›</i>Request investor deck</a></div>
-</div></section>
-
-<section><div class="wrap" style="max-width:820px"><h2 class="rv" style="margin-bottom:30px">Questions buyers ask first.</h2>
-<details><summary>Is it safe for skin?</summary><p>In a human skin test with 21 participants, no irritation was recorded, and cells tolerated up to 1,000 µg/mL.</p></details>
-<details><summary>Which registrations do you hold?</summary><p>INCI (USA), JCIA (Japan), NMPA (China) and KCA (Korea). Local requirements vary, so we confirm each market with you.</p></details>
-<details><summary>Who can access the technology and ingredient details?</summary><p>Only carefully vetted partners. Tell us about your company and plans, and we will get back to you.</p></details>
-<details><summary>Will it work in my formulation?</summary><p>We share compatibility guidance and test protocols with your R&amp;D team.</p></details>
-<details><summary>How do I get started?</summary><p>Email us a short note about your company and plans.</p></details>
-</div></section>
-
-<section id="cta"><div class="wrap"><span class="mono">Get started</span><h2 style="margin-top:10px">Tell us who you are and what you need.</h2><p class="lead" style="margin:14px auto 0">Email us at <a href="mailto:exosomekorea@gmail.com" style="color:var(--ac)">exosomekorea@gmail.com</a></p>
-<div style="margin-top:36px"><a class="pill" href="mailto:exosomekorea@gmail.com?subject=Request"><i>›</i>Request</a></div>
-</div></section>
-
-<footer><div class="wrap fc"><div><b>✦ Potatosome</b><p class="mono" style="max-width:24em;margin-top:10px">Plant exosomes for skin barrier repair.<br>Seoul, Korea · <a href="mailto:exosomekorea@gmail.com" style="color:var(--ac)">exosomekorea@gmail.com</a></p></div>
-<div><span class="mono">Science</span><ul><li>Evidence</li><li>Papers</li></ul></div><div><span class="mono">Ingredient</span><ul><li>Potatosome™</li><li>Pipeline</li></ul></div><div><span class="mono">Company</span><ul><li>About</li><li>Investors</li></ul></div></div>
-<div class="word" aria-hidden="true">Potatosome</div>
-<div class="legal mono"><span>© 2026 All rights reserved</span><span>Terms · Privacy</span></div></footer>
-
-<div id="modal" role="dialog" aria-modal="true"><div class="glass"><button id="x" aria-label="Close">×</button><div class="orb"></div><h3 id="mt"></h3><p id="mb" style="color:#b9c6c2"></p></div></div>
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="glass"><button id="x" type="button" aria-label="Close">×</button><div class="orb"></div><h3 id="mt"></h3><p id="mb"></p></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-var $=function(s){return document.querySelector(s)};
-var KO={"Plant exosomes that repair and defend the skin barrier": "피부 장벽을 회복하고 지켜주는 식물 엑소좀", "Exosomes from edible plants, starting with potato, that calm irritated skin and rebuild its barrier at the same time.": "감자를 시작으로 식용 식물에서 얻은 엑소좀이 자극받은 피부를 진정시키고 피부 장벽을 동시에 재건합니다.", "Science": "과학", "Ingredient": "원료", "Services": "서비스", "Company": "회사", "Investors": "투자자", "Plant exosomes that repair and defend the skin barrier.": "피부 장벽을 회복하고 지켜주는 식물 엑소좀.", "Why edible plants?": "왜 식용 식물일까요?", "What it does for skin": "피부에 어떤 작용을 할까요?", "Exosomes from edible plants, starting with potato. They calm irritated skin and rebuild its barrier at the same time. Cosmetic benefits today, and a long-term goal: chronic inflammatory skin conditions.": "감자에서 시작하는 식용 식물 엑소좀. 자극받은 피부를 진정시키고 피부 장벽을 동시에 재건합니다. 오늘은 화장품 효능으로, 장기 목표는 만성 염증성 피부 컨디션입니다.", "Request": "문의하기", "Ingredient name registered in the USA, Japan, China and Korea · 3 peer-reviewed papers": "미국·일본·중국·한국 원료명 등재 · 국제 논문 3편", "Skin temperature right after use, n=21": "사용 직후 피부 표면온도, n=21", "Wrinkle depth": "주름 깊이", "human test, n=21, 2 weeks": "인체적용시험, n=21, 2주", "Source: potato": "원료: 감자", "INCI · USA": "INCI · 미국", "JCIA · Japan": "JCIA · 일본", "NMPA · China": "NMPA · 중국", "KCA · Korea": "KCA · 한국", "Peer-reviewed": "논문 검증", "Anti-aging": "안티에이징", "Barrier repair": "장벽 케어", "Soothing": "진정", "UV-stress defense": "자외선 스트레스 방어", "Hydration": "수분", "Irritated skin and a weak barrier feed each other.": "자극받은 피부와 약해진 장벽은 서로를 악화시킵니다.", "Inflammation breaks the barrier": "염증이 장벽을 무너뜨립니다", "Every flare-up leaves skin a little weaker than before.": "염증이 반복될수록 피부는 조금씩 더 약해집니다.", "A weak barrier lets irritants in": "약한 장벽은 자극을 막지 못합니다", "Moisture escapes, triggers get through, and skin reacts again.": "수분은 빠져나가고 자극 요인은 스며들어 피부가 다시 반응합니다.", "The loop never settles": "악순환은 쉽게 끊기지 않습니다", "That cycle is why sensitive, chronically inflamed skin is so hard to calm. Fixing only one side is not enough.": "이 순환 때문에 민감하고 염증이 반복되는 피부는 진정시키기 어렵습니다. 한쪽만 다루어서는 충분하지 않습니다.", "Calm the inflammation. Rebuild the barrier. At the same time.": "염증은 가라앉히고, 장벽은 세우고. 동시에.", "Cosmetic benefits already shown in human tests today. Our research direction: chronic inflammatory skin conditions, where calming and rebuilding have to happen together.": "인체적용시험으로 확인한 화장품 효능을 지금 활용할 수 있습니다. 연구의 방향은 만성 염증성 피부 컨디션입니다. 진정과 장벽 회복이 함께 이루어져야 하는 영역입니다.", "Calms": "진정", "Less inflammation": "염증 감소", "Lowers key inflammatory signals (TNF-α, IL-6) in skin cell models, including UV-stressed cells.": "피부세포 모델(자외선 스트레스 세포 포함)에서 주요 염증 신호(TNF-α, IL-6)를 낮춥니다.", "Rebuilds": "재건", "A stronger barrier": "더 튼튼한 장벽", "Raises the genes that build the skin barrier and hold in water (FLG, TGM1, AQP3, HAS) in skin cells.": "피부세포에서 피부 장벽을 만들고 수분을 붙잡는 유전자(FLG, TGM1, AQP3, HAS)를 높입니다.", "Evidence": "근거", "Three peer-reviewed papers and a human skin test.": "국제 논문 3편과 인체 피부 시험.", "Wrinkle depth, human test n=21": "주름 깊이, 인체적용시험 n=21", "After 2 weeks. Elasticity +5.7%. Company data.": "2주 후 기준. 탄력 +5.7%. 회사 자료.", "Viability after UVB": "자외선(UVB) 후 세포 생존율", "Untreated: 55% lost": "처리 안 함: 55% 손실", "Pre-treated: 10% lost": "사전 처리: 10% 손실", "Safety": "안전성", "Irritation events in the human skin test (2025 paper). No cell toxicity up to 1,000 µg/mL.": "인체 피부 시험에서 자극 사례 0건(2025년 논문). 1,000 µg/mL까지 세포독성 없음.", "Barrier genes switched on, in skin cells": "피부세포에서 켜지는 장벽 유전자", "Safety profile of Solanum tuberosum-derived exosomes": "감자(Solanum tuberosum) 유래 엑소좀의 안전성 프로파일", "In vitro and human skin tests · Read paper ›": "세포 및 인체 피부 시험 · 논문 보기 ›", "Potato exosomes against UVB photodamage in HaCaT cells": "HaCaT 세포에서 감자 엑소좀의 UVB 광손상 억제", "Keratinocyte model · Read paper ›": "각질형성세포 모델 · 논문 보기 ›", "Plant exosome screening for anti-inflammatory activity": "식물 엑소좀의 항염 활성 스크리닝", "8 sources compared · Read paper ›": "8가지 식물 비교 · 논문 보기 ›", "From ingredient to finished product.": "원료에서 완제품까지.", "Potatosome™ ingredient": "Potatosome™ 원료", "Finished cosmetics": "완제품 화장품", "Where it is heading": "앞으로의 방향", "Ways to work with us.": "함께하는 방법.", "Ingredient supply": "원료 공급", "Potatosome™ with specs, safety data and registration documents.": "Potatosome™과 규격서, 안전성 자료, 등재 서류를 함께 제공합니다.", "OEM/ODM formulation support": "OEM/ODM 제형 지원", "Help fitting it into your serums, ampoules and creams.": "세럼, 앰플, 크림에 적용하도록 돕습니다.", "Licensing and co-development": "라이선스·공동개발", "Joint development of branded products and new indications.": "브랜드 제품과 새로운 적응증을 함께 개발합니다.", "Registered for cosmetic use through INCI-based routes in 40+ markets. Requirements vary by country.": "40개 이상 시장에서 화장품 원료로 등재 경로를 확보했습니다. 국가별 요건은 다를 수 있습니다.", "Who is behind it": "함께하는 사람들", "Science from Seoul, since 2021.": "2021년부터, 서울에서 이어온 연구.", "A research team turning edible plant exosomes into skin-care ingredients: cosmetics today, medical devices and therapeutics over time.": "식용 식물 엑소좀을 스킨케어 원료로 만드는 연구팀입니다. 오늘은 화장품, 앞으로는 의료기기와 치료제로 넓혀갑니다.", "A platform with a published safety record.": "발표된 안전성 근거 위에 세운 플랫폼.", "Investor snapshot": "투자자 스냅샷", "Platform": "플랫폼", "Cosmetics, then medical devices, then therapeutics": "화장품, 이후 의료기기, 이후 치료제", "IP": "지식재산", "Registrations": "등재", "3 papers, human skin test n=21": "논문 3편, 인체 피부 시험 n=21", "Markets": "시장", "40+ countries": "40개국 이상", "Request investor deck": "투자자료 요청", "Questions buyers ask first.": "바이어가 가장 먼저 묻는 질문.", "Is it safe for skin?": "피부에 안전한가요?", "In a human skin test with 21 participants, no irritation was recorded, and cells tolerated up to 1,000 µg/mL.": "21명이 참여한 인체 피부 시험에서 자극이 기록되지 않았고, 세포는 1,000 µg/mL까지 문제없이 견뎠습니다.", "Which registrations do you hold?": "어떤 등재를 보유하고 있나요?", "INCI (USA), JCIA (Japan), NMPA (China) and KCA (Korea). Local requirements vary, so we confirm each market with you.": "미국 INCI, 일본 JCIA, 중국 NMPA, 한국 KCA입니다. 국가별 요건이 달라 시장마다 함께 확인해 드립니다.", "Will it work in my formulation?": "제 제형에도 적용할 수 있나요?", "We share compatibility guidance and test protocols with your R&D team.": "R&D팀에 적용 가이드와 시험 방법을 공유해 드립니다.", "How do I get started?": "어떻게 시작하나요?", "Get started": "시작하기", "Name": "이름", "Role": "직책", "Work email": "업무용 이메일", "Interest": "관심 분야", "Licensing": "라이선스", "Investment": "투자", "Message": "문의 내용", "Request received": "문의가 접수되었습니다", "Thank you. We will get back to you soon.": "감사합니다. 곧 회신드리겠습니다.", "Plant exosomes for skin barrier repair.": "피부 장벽 회복을 위한 식물 엑소좀.", "Seoul, Korea ·": "대한민국 서울 ·", "Papers": "논문", "Pipeline": "파이프라인", "About": "소개", "© 2026 All rights reserved": "© 2026 All rights reserved", "Terms · Privacy": "이용약관 · 개인정보처리방침", "Vesicle": "엑소좀 소포", "Exosome cluster": "엑소좀 군집", "Skin barrier layers": "피부 장벽 층", "Barrier ring": "장벽 고리", "Made from potato, an edible plant": "식용 식물인 감자에서 얻었습니다", "About 66 nm particles, over 98% purity": "약 66 nm 입자, 순도 98% 이상", "Calms inflammation and strengthens the barrier at once": "염증 진정과 장벽 강화를 한 번에", "Ingredient name registered in the USA, Japan, China and Korea": "미국·일본·중국·한국에서 원료명 등재", "Barrier-repair and anti-aging formats": "장벽 케어와 안티에이징 제형", "Consumer brand tracks in development": "소비자 브랜드 트랙 개발 중", "OEM production through qualified partners": "검증된 파트너를 통한 OEM 생산", "Where it is heading (R&D)": "앞으로의 방향 (연구개발)", "Chronic inflammatory skin conditions: the long-term goal": "만성 염증성 피부 컨디션: 장기 목표", "Medical-device track in development": "의료기기 트랙 개발 중", "Research stage only, not available as products": "연구 단계이며 제품으로 판매되지 않습니다", "Two things at once: it quiets the inflammatory signals that keep skin reactive, and it switches on the proteins that build the barrier and hold in moisture.": "두 가지를 동시에 합니다. 피부를 예민하게 만드는 염증 신호를 낮추고, 장벽을 만들고 수분을 붙잡는 단백질을 깨웁니다.", "Korean patent 10-2579898, granted Sep 2023": "대한민국 등록특허 10-2579898 (2023년 9월 등록)", "Shared with vetted partners": "검증된 협력자에게만 공개합니다", "Our technology and ingredient details are disclosed only to carefully vetted partners.": "기술과 원료의 세부 정보는 철저히 검증된 협력자에게만 공개합니다.", "Who can access the technology and ingredient details?": "기술과 원료 정보는 누구에게 공개하나요?", "Only carefully vetted partners. Tell us about your company and plans, and we will get back to you.": "철저히 검증된 협력자에게만 공개합니다. 회사와 계획을 알려주시면 회신드립니다.", "Email us a short note about your company and plans.": "회사와 계획을 간단히 적어 이메일로 보내주세요.", "Tell us who you are and what you need.": "누구이고 무엇이 필요한지 알려주세요.", "Email us at": "이메일로 문의:", "HAS2 245% · TGM1 230% · AQP3 12,500%. Not every plant exosome performs alike: in the patent data, potato cut IL-6 by 74% and TNF-α by 77%, ahead of pear, radish and orange.": "HAS2 245% · TGM1 230% · AQP3 12,500%. 모든 식물 엑소좀이 같지는 않습니다. 특허 데이터에서 감자는 IL-6를 74%, TNF-α를 77% 낮춰 배, 무, 오렌지보다 앞섰습니다.", "Potato is a food people already know. Its exosomes are tiny natural carriers, about 66 nm wide with over 98% purity, isolated straight from the plant. Compared with pear, radish and orange exosomes, potato showed the strongest anti-inflammatory and anti-aging effect in skin cells.": "감자는 누구나 아는 식품입니다. 감자 엑소좀은 식물에서 직접 분리한 지름 약 66 nm, 순도 98% 이상의 작은 천연 전달체입니다. 배, 무, 오렌지 엑소좀과 비교했을 때 감자가 피부세포에서 가장 강한 항염·항노화 효과를 보였습니다."},lang='en',curTab=0,mm=document.querySelector('meta[name=description]'),o_t=document.title,o_m=mm.content;
-function tr(t){return lang=='ko'&&Object.prototype.hasOwnProperty.call(KO,t)?KO[t]:t}
-function walk(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,a=[];while(n=w.nextNode()){var p=n.parentNode.nodeName;if(p!='SCRIPT'&&p!='STYLE')a.push(n)}
-a.forEach(function(n){if(n._o===undefined){var t=n.nodeValue.trim();n._o=t&&Object.prototype.hasOwnProperty.call(KO,t)?n.nodeValue:null}if(n._o===null)return;var k=n._o.trim();n.nodeValue=lang=='ko'?n._o.replace(k,KO[k]):n._o})}
-function setLang(l,noh){lang=l;document.documentElement.lang=l;document.title=tr(o_t);mm.content=tr(o_m);walk();tab(curTab);if(typeof S!=='undefined'&&S)show(cur);$('#lg').textContent=l=='ko'?'English':'한국어';if(!noh){try{localStorage.setItem('lg',l)}catch(e){}try{history.replaceState(null,'','#'+l)}catch(e){}}}
-$('#lg').onclick=function(){setLang(lang=='ko'?'en':'ko')};
-var l0=location.hash=='#ko'||location.hash=='#en'?location.hash.slice(1):'en';
-if(location.hash!='#ko'&&location.hash!='#en'){try{l0=localStorage.getItem('lg')=='ko'?'ko':'en'}catch(e){}}
-setTimeout(function(){if(l0=='ko')setLang('ko',1)},0);
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var ALV='https://signaturemdx-cmd.github.io/ALVORA_LAB/';
+var lang='en';
 
-// marquee clone
+var T={
+ en:{title:'Potatosome® · Plant exosomes that repair and defend the skin barrier',
+     desc:'Potatosome® — plant exosomes from edible plants, starting with potato, that calm irritated skin and rebuild its barrier at the same time. Entry point to ALVORA LAB evidence and products.',
+     shapes:['Source: potato','Vesicle','Exosome cluster','Skin barrier layers','Barrier ring'],
+     prev:'Previous shape',next:'Next shape',close:'Close',modalAria:'Close dialog',switchLabel:'한국어로 보기',
+     mv:['Why edible plants?','Potato is a food people already know. Its exosomes are tiny natural carriers, about 66 nm wide with over 98% purity, isolated straight from the plant. Compared with pear, radish and orange exosomes, potato showed the strongest anti-inflammatory and anti-aging effect in skin cells.'],
+     mb:['What it does for skin','Two things at once: it quiets the inflammatory signals that keep skin reactive, and it switches on the proteins that build the barrier and hold in moisture.']},
+ ko:{title:'Potatosome® · 피부 장벽을 회복하고 지켜주는 식물 엑소좀',
+     desc:'Potatosome® — 감자에서 시작하는 식용 식물 엑소좀. 자극받은 피부를 진정시키고 피부 장벽을 동시에 재건합니다. ALVORA LAB의 임상 근거와 완제품으로 이어집니다.',
+     shapes:['원료: 감자','엑소좀 소포','엑소좀 군집','피부 장벽 층','장벽 고리'],
+     prev:'이전 형태',next:'다음 형태',close:'닫기',modalAria:'창 닫기',switchLabel:'Switch to English',
+     mv:['왜 식용 식물일까요?','감자는 누구나 아는 식품입니다. 감자 엑소좀은 식물에서 직접 분리한 지름 약 66 nm, 순도 98% 이상의 작은 천연 전달체입니다. 배, 무, 오렌지 엑소좀과 비교했을 때 감자가 피부세포에서 가장 강한 항염·항노화 효과를 보였습니다.'],
+     mb:['피부에 어떤 작용을 할까요?','두 가지를 동시에 합니다. 피부를 예민하게 만드는 염증 신호를 낮추고, 장벽을 만들고 수분을 붙잡는 단백질을 깨웁니다.']}
+};
+
+function alvoraUrl(hash,l){return ALV+'?lang='+(l==='ko'?'ko':'en')+'#'+hash}
+function clinicalUrl(hash,l){return ALV+'evidence/clinical.html?lang='+(l==='ko'?'ko':'en')+'#'+hash}
+function syncLinks(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-alv]'),function(a){a.setAttribute('href',alvoraUrl(a.getAttribute('data-alv'),lang))});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-clin]'),function(a){a.setAttribute('href',clinicalUrl(a.getAttribute('data-clin'),lang))});
+}
+
+function applyLang(l){
+  lang=l==='en'?'en':'ko';
+  var t=T[lang];
+  document.documentElement.setAttribute('lang',lang);
+  document.title=t.title;
+  var md=document.querySelector('meta[name=description]');if(md)md.setAttribute('content',t.desc);
+  var od=document.querySelector('meta[property="og:description"]');if(od)od.setAttribute('content',t.desc);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ko]'),function(el){
+    if(!el.hasAttribute('data-en'))return;
+    el.innerHTML=el.getAttribute(lang==='ko'?'data-ko':'data-en');
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-aria-en]'),function(el){
+    el.setAttribute('aria-label',el.getAttribute(lang==='ko'?'data-aria-ko':'data-aria-en'));
+  });
+  var lg=$('#lg');lg.textContent=lang==='ko'?'English':'한국어';lg.setAttribute('aria-label',t.switchLabel);
+  $('#pv').setAttribute('aria-label',t.prev);$('#nx').setAttribute('aria-label',t.next);
+  var xb=$('#x');if(xb)xb.setAttribute('aria-label',t.close);
+  if(mcur){var m=mcur==='v'?t.mv:t.mb;$('#mt').textContent=m[0];$('#mb').textContent=m[1]}
+  if(typeof cur!=='undefined')$('#cn').textContent=t.shapes[cur];
+  syncLinks();
+}
+function syncUrl(){
+  try{var u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u.pathname+u.search+'#'+lang)}catch(e){}
+}
+function setLang(l,quiet){applyLang(l);if(!quiet)syncUrl()}
+
+$('#lg').addEventListener('click',function(){setLang(lang==='ko'?'en':'ko',false)});
+
+// initial language: ?lang= > #ko/#en > saved choice
+var boot='en';
+try{
+  var q=new URLSearchParams(location.search).get('lang');
+  if(q==='ko'||q==='en'){boot=q}
+  else if(location.hash==='#ko'||location.hash==='#en'){boot=location.hash.slice(1)}
+  else{var s=localStorage.getItem('potatosome.lang');if(s==='ko'||s==='en')boot=s}
+}catch(e){}
+applyLang(boot);
+
+// marquee
 var mi=$('#mqi');mi.innerHTML+=mi.innerHTML;
-// reveal + counters + bars
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.classList.add('in');
-t.querySelectorAll('.cu').forEach(function(c){var to=+c.dataset.to,d=+c.dataset.d,s=performance.now();(function f(n){var p=Math.min(1,(n-s)/1400);c.textContent=(to*(1-Math.pow(1-p,3))).toFixed(d);if(p<1)requestAnimationFrame(f)})(s)});
-t.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%'});io.unobserve(t)})},{threshold:.25});
-document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
-// tabs
-var T=[["Potatosome™ (ExoP)",["Made from potato, an edible plant","About 66 nm particles, over 98% purity","Calms inflammation and strengthens the barrier at once","Ingredient name registered in the USA, Japan, China and Korea"]],["Finished cosmetics",["Barrier-repair and anti-aging formats","Consumer brand tracks in development","OEM production through qualified partners"]],["Where it is heading (R&D)",["Chronic inflammatory skin conditions: the long-term goal","Medical-device track in development","Research stage only, not available as products"]]];
-function tab(i){curTab=i;$('#pt').textContent=tr(T[i][0]);$('#pl').innerHTML=T[i][1].map(function(x){return'<li>'+tr(x)+'</li>'}).join('');document.querySelectorAll('.tabs button').forEach(function(b,j){b.setAttribute('aria-selected',j==i)})}
-document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){tab(+b.dataset.t)}});tab(0);
+
 // modal
-var M={v:["Why edible plants?","Potato is a food people already know. Its exosomes are tiny natural carriers, about 66 nm wide with over 98% purity, isolated straight from the plant. Compared with pear, radish and orange exosomes, potato showed the strongest anti-inflammatory and anti-aging effect in skin cells."],b:["What it does for skin","Two things at once: it quiets the inflammatory signals that keep skin reactive, and it switches on the proteins that build the barrier and hold in moisture."]};
-document.querySelectorAll('.hb[data-m]').forEach(function(h){h.onclick=function(){var m=M[h.dataset.m];$('#mt').textContent=tr(m[0]);$('#mb').textContent=tr(m[1]);$('#modal').classList.add('on');$('#x').focus()}});
-function cl(){$('#modal').classList.remove('on')}$('#x').onclick=cl;$('#modal').onclick=function(e){if(e.target.id=='modal')cl()};document.onkeydown=function(e){if(e.key=='Escape')cl()};
-// particles
+var mcur=null;
+Array.prototype.forEach.call(document.querySelectorAll('[data-m]'),function(b){
+  b.addEventListener('click',function(){
+    mcur=b.getAttribute('data-m');var m=(lang==='ko'?T.ko:T.en)[mcur==='v'?'mv':'mb'];
+    $('#mt').textContent=m[0];$('#mb').textContent=m[1];$('#modal').classList.add('on');$('#x').focus();
+  });
+});
+function closeModal(){$('#modal').classList.remove('on');mcur=null}
+$('#x').addEventListener('click',closeModal);
+$('#modal').addEventListener('click',function(e){if(e.target.id==='modal')closeModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('#modal').classList.contains('on'))closeModal()});
+
+// ---------- particles ----------
 if(!window.THREE)return;
-var N=12000,cv=$('#cv'),r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});r.setPixelRatio(Math.min(2,devicePixelRatio));
+var N=12000,cv=$('#cv');
+var r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+r.setPixelRatio(Math.min(2,window.devicePixelRatio||1));
 var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,50);cam.position.z=5.2;
 var g=new THREE.Group();sc.add(g);
 function rv(){var x=0,y=0,z=0,s;do{x=Math.random()*2-1;y=Math.random()*2-1;z=Math.random()*2-1;s=x*x+y*y+z*z}while(s>1||s<.01);s=Math.sqrt(s);return[x/s,y/s,z/s]}
 var cen=[];for(var k=0;k<7;k++){var c=rv(),q=Math.random()*.7;cen.push([c[0]*q,c[1]*q,c[2]*q])}
-var S=[["Source: potato",function(i){var v=rv(),b=1+.07*Math.sin(5*v[0]+3*v[1]);return[v[0]*1.3*b,v[1]*.88*b,v[2]*.98*b]}],
-["Vesicle",function(i){var v=rv(),k=i%10<7?1.15:Math.random()*.5;return[v[0]*k,v[1]*k,v[2]*k]}],
-["Exosome cluster",function(i){var v=rv(),c=cen[i%7];return[c[0]+v[0]*.34,c[1]+v[1]*.34,c[2]+v[2]*.34]}],
-["Skin barrier layers",function(i){var l=i%4,x=(Math.random()-.5)*3.4,z=(Math.random()-.5)*2.2;return[x,-.9+l*.58+Math.sin(x*2+l)*.09,z]}],
-["Barrier ring",function(i){var u=Math.random()*6.283,v=Math.random()*6.283,R=1+.36*Math.cos(v);return[R*Math.cos(u)*1.1,.36*Math.sin(v)*1.1,R*Math.sin(u)*1.1]}]];
-var tg=S.map(function(s){var a=new Float32Array(N*3);for(var i=0;i<N;i++){var p=s[1](i);a[i*3]=p[0];a[i*3+1]=p[1];a[i*3+2]=p[2]}return a});
+var SHAPES=[
+ function(){var v=rv(),b=1+.07*Math.sin(5*v[0]+3*v[1]);return[v[0]*1.3*b,v[1]*.88*b,v[2]*.98*b]},
+ function(i){var v=rv(),k=i%10<7?1.15:Math.random()*.5;return[v[0]*k,v[1]*k,v[2]*k]},
+ function(i){var v=rv(),cc=cen[i%7];return[cc[0]+v[0]*.34,cc[1]+v[1]*.34,cc[2]+v[2]*.34]},
+ function(i){var l=i%4,x=(Math.random()-.5)*3.4,z=(Math.random()-.5)*2.2;return[x,-.9+l*.58+Math.sin(x*2+l)*.09,z]},
+ function(){var u=Math.random()*6.283,v=Math.random()*6.283,R=1+.36*Math.cos(v);return[R*Math.cos(u)*1.1,.36*Math.sin(v)*1.1,R*Math.sin(u)*1.1]}
+];
+function build(fn){var a=new Float32Array(N*3);for(var i=0;i<N;i++){var p=fn(i);a[i*3]=p[0];a[i*3+1]=p[1];a[i*3+2]=p[2]}return a}
+var tg=SHAPES.map(build);
 var pos=new Float32Array(N*3);for(var i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*5;
 var ge=new THREE.BufferGeometry();ge.setAttribute('position',new THREE.BufferAttribute(pos,3));
-var tx=document.createElement('canvas');tx.width=tx.height=32;var cx=tx.getContext('2d'),gr=cx.createRadialGradient(16,16,0,16,16,16);gr.addColorStop(0,'rgba(255,255,255,1)');gr.addColorStop(.4,'rgba(255,255,255,.35)');gr.addColorStop(1,'rgba(255,255,255,0)');cx.fillStyle=gr;cx.fillRect(0,0,32,32);
+var tx=document.createElement('canvas');tx.width=tx.height=32;
+var cx=tx.getContext('2d'),gr=cx.createRadialGradient(16,16,0,16,16,16);
+gr.addColorStop(0,'rgba(255,255,255,1)');gr.addColorStop(.4,'rgba(255,255,255,.35)');gr.addColorStop(1,'rgba(255,255,255,0)');
+cx.fillStyle=gr;cx.fillRect(0,0,32,32);
 var mt=new THREE.PointsMaterial({size:.034,map:new THREE.CanvasTexture(tx),color:0xcff7ec,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,opacity:.9});
 g.add(new THREE.Points(ge,mt));
-var cur=0,mx=9,my=9,still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-function show(i){cur=(i+S.length)%S.length;$('#cn').textContent=tr(S[cur][0])}
-$('#nx').onclick=function(){show(cur+1);t0=performance.now()};$('#pv').onclick=function(){show(cur-1);t0=performance.now()};
+var cur=0,mx=9,my=9,still=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+function show(i){cur=(i+SHAPES.length)%SHAPES.length;var cn=$('#cn');if(cn)cn.textContent=T[lang].shapes[cur]}
+$('#nx').addEventListener('click',function(){show(cur+1);t0=performance.now()});
+$('#pv').addEventListener('click',function(){show(cur-1);t0=performance.now()});
 var t0=performance.now();
-function size(){var w=cv.clientWidth,h=cv.clientHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();g.position.x=w>900?1.5:0;g.position.y=w>900?0:.9;g.scale.setScalar(w>900?1:.8)}
-addEventListener('resize',size);size();
-cv.parentNode.addEventListener('pointermove',function(e){var b=cv.getBoundingClientRect();var nx=(e.clientX-b.left)/b.width*2-1,ny=-((e.clientY-b.top)/b.height*2-1);var hh=Math.tan(22.5*Math.PI/180)*cam.position.z;mx=nx*hh*cam.aspect-g.position.x;my=ny*hh-g.position.y});
+function size(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+ if(w>980){g.position.set(1.55,0,0);g.scale.setScalar(1);mt.opacity=.9}
+ else if(w>620){g.position.set(0,.55,0);g.scale.setScalar(.86);mt.opacity=.9}
+ else{g.position.set(.45,-1.45,0);g.scale.setScalar(.7);mt.opacity=.66}}
+window.addEventListener('resize',size);size();
+cv.parentNode.addEventListener('pointermove',function(e){var b=cv.getBoundingClientRect();var nx2=(e.clientX-b.left)/b.width*2-1,ny=-((e.clientY-b.top)/b.height*2-1);var hh=Math.tan(22.5*Math.PI/180)*cam.position.z;mx=nx2*hh*cam.aspect-g.position.x;my=ny*hh-g.position.y});
 cv.parentNode.addEventListener('pointerleave',function(){mx=9;my=9});
 function loop(n){requestAnimationFrame(loop);
-if(!still&&n-t0>3600){show(cur+1);t0=n}
-var t=tg[cur],T=n*.001;
-for(var i=0;i<N;i++){var j=i*3,x=pos[j],y=pos[j+1],z=pos[j+2];
-x+=(t[j]+Math.sin(T+i)*.012-x)*.05;y+=(t[j+1]+Math.cos(T*1.1+i)*.012-y)*.05;z+=(t[j+2]-z)*.05;
-var dx=x-mx,dy=y-my,d=dx*dx+dy*dy;if(d<.35){var f=(.35-d)*.5;x+=dx*f;y+=dy*f}
-pos[j]=x;pos[j+1]=y;pos[j+2]=z}
-ge.attributes.position.needsUpdate=true;g.rotation.y=still?0:T*.18;r.render(sc,cam)}
+ if(!still&&n-t0>3600){show(cur+1);t0=n}
+ var t=tg[cur],T2=n*.001;
+ for(var i=0;i<N;i++){var j=i*3,x=pos[j],y=pos[j+1],z=pos[j+2];
+  x+=(t[j]+Math.sin(T2+i)*.012-x)*.05;y+=(t[j+1]+Math.cos(T2*1.1+i)*.012-y)*.05;z+=(t[j+2]-z)*.05;
+  var dx=x-mx,dy=y-my,d=dx*dx+dy*dy;if(d<.35){var f=(.35-d)*.5;x+=dx*f;y+=dy*f}
+  pos[j]=x;pos[j+1]=y;pos[j+2]=z}
+ ge.attributes.position.needsUpdate=true;g.rotation.y=still?0:n*.001*.18;r.render(sc,cam)}
 show(0);requestAnimationFrame(loop);
 })();
 </script>
